@@ -1,0 +1,26 @@
+Body{
+    width: 100vw;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+
+    font-family: 'Recursive', sans-serif;
+    font-family: 'Righteous', cursive;
+    font-family: 'Viga', sans-serif;
+
+    background-color: rgb(48, 48, 48);
+
+    flex-grow: 1;
+    overflow: auto;
+    
+}
+
+.body {
+    width: 100wv;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
