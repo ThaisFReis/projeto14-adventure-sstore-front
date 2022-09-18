@@ -1,0 +1,40 @@
+.products{
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products .product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+}
+
+.products .product .product-image{
+    width: 200px;
+    height: 200px;
+}
+
+.products .product .product-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+}
+
+.products .product .product-price{
+    font-size: 20px;
+    font-weight: 100;
+    color: #000
+}
+
+.products .product .button-cart{
+    height: 50px;
+    width: 50px;
+}
