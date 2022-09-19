@@ -1,0 +1,109 @@
+.return{
+    color: #fff;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.cartPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cart h1{
+    color: #fff;
+    font-size: 50px;
+}
+
+.mainPage{
+    width: 100vh;
+    height: 100vh;
+
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.boxCart{
+    width: 60vw;
+    height: 60vh;
+    border: #fff solid 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.cart__item{
+    width: 90%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 1%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.cart__item__price{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.totalPrice{
+    background-color: #fff;
+    border: #fff solid 1px;
+    bottom: 0;
+    width: 60vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.totalPrice div{
+    width: 50vw;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+}
+
+.totalPrice div p{
+    color: #000;
+    font-size: 30px;
+}
+
+
+.actions{
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40%;
+}
+
+.coin{
+    width: 25px;
+}

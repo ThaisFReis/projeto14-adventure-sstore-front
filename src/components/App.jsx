@@ -13,6 +13,7 @@ import All from "./Categories/All/index"
 import Weapons from "./Categories/Weapons/index.jsx";
 import Foods from "./Categories/Foods/index.jsx";
 import Equipment from "./Categories/Equipment/index.jsx";
+import CheckOut from './CheckOut/index.jsx';
 
 import { AuthProvider } from './Contexts/auth';
 
@@ -31,6 +32,7 @@ return (
                 <Route path="/weapons" element={<Weapons />} />
                 <Route path="/foods" element={<Foods />} />
                 <Route path="/equipment" element={<Equipment />} />
+                <Route path="/checkout" element={<CheckOut />} />
             </Routes>
         </AuthProvider>
     </Router>

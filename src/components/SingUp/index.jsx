@@ -21,8 +21,7 @@ function SingUp(){
           navigate("/login");
     
           navigator('/');
-        } catch (error) {
-            alert("Erro ao cadastrar");          
+        } catch (error) {        
             console.error('Deu erro ao cadastrar o usuario');
         }
       }

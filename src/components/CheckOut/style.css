@@ -1,0 +1,29 @@
+.mainPage{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkOutPage{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 50vh;
+    gap: 100px;
+    border: 1px solid #fff;
+    border-radius: 1%;
+}
+
+.checkOutPage h1{
+    color: #fff;
+    font-size: 2rem;
+}
+
+.actions{
+    width: 20vw;
+}
