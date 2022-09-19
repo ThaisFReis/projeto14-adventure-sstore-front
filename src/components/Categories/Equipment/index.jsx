@@ -1,24 +1,41 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Header from "../../Utils/Header/Header"
 import Categories from "../index";
-import equipment from "./equipment.js"
 import coin from "../../../assets/img/coin.png"
 import cart from "../../../assets/img/shopping-cart.png"
+import Img from "../../../assets/img/Equipamento/14.png"
 
 import "../style.css"
 
 function Equipment(){
-    console.log(equipment)
+    const [products, setProducts] = useState([]);
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const promise = axios.get("https://projeto14-adventuresstore-back.herokuapp.com/products/category/Equipamento");
     
-    const listEquipment = equipment.map((equipment) =>
-        <div className="card" key={equipment.id}>
+        promise.then((res) => {
+          setProducts(res.data);
+        });
+        promise.catch((err) => {
+          alert(err.response.data);
+          navigate("/");
+        });
+      }, []);
+    
+    const listEquipment = products.map((products) =>
+        <div className="card" key={products.id}>
             <div className="card_img">
-                <img src={equipment.img} alt={equipment.img}/>
+                <img src={Img} alt={products.img}/>
             </div>
             <div className="card_header">
-                <p>{equipment.name}</p>
+                <p>{products.name}</p>
                 <div className="price">
                     <div>
-                        <p>{equipment.price}</p>
+                        <p>3</p>
                         <img src={coin} alt="coin" />
                     </div>
                     <img className="btn" src={cart} alt="Add cart" />
