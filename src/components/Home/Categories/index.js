@@ -4,10 +4,10 @@ function Categories(){
     return(
         <>
                 <div className="categories">
-                    <p>Promoção</p>
-                    <p>Categoria</p>
-                    <p>Categoria</p>
-                    <p>Categoria</p>
+                    <p>Todos</p>
+                    <p>Armas</p>
+                    <p>Equipamento</p>
+                    <p>Comida</p>
                 </div>
         </>
     )

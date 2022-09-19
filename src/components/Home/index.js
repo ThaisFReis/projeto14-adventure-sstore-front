@@ -1,14 +1,14 @@
 import "./style.css"
 import Header from "../Utils/Header/Header"
 import Categories from "./Categories"
-import Products from "./Products"
+import MainContent from "./MainContent"
 
 function Home(){
     return (
         <div className="home">  
                 <Header />
                 <Categories />
-                <Products />
+                <MainContent />
         </div>
     )
 }

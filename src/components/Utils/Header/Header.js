@@ -8,14 +8,7 @@ function Header(){
     const navigate = useNavigate();
 
     async function handleSubmit(e){
-        /* e.preventDefault();
-         try{
-             const {data} = await axios.post("http://localhost:4000/Login", {email, password});
-             setUser(data);*/
-             navigate("/Login");
-         /*}catch(error){
-             console.log("Erro ao fazer login");
-         }*/
+             navigate("/login");
      }
 
     return(

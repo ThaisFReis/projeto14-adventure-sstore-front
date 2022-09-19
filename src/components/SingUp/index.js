@@ -1,20 +1,55 @@
-import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
+import {SingUpPage, ContanierForm, StyledLink, Title, Input} from './style';
+import Button from "../Utils/Button/Button.js";
 
 function SingUp(){
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+
     const navigate = useNavigate();
 
-    async function handleSubmit(e){
-        /* e.preventDefault();
-         try{
-             const {data} = await axios.post("http://localhost:4000/Login", {email, password});
-             setUser(data);*/
-             navigate("/Login");
-         /*}catch(error){
-             console.log("Erro ao fazer login");
-         }*/
-     }
+    async function handleSubmit(e) {
+        e.preventDefault();
+        const body = { name, email, password, confirmPassword };
+        try {
+          await axios.post('http://localhost:3000/cadastro', body);
+    
+          navigator('/');
+        } catch (error) {
+          console.error('Deu erro ao cadastrar o usuario');
+        }
+      }
     return (
-        <button onClick={handleSubmit}>voltar</button>
+        <SingUpPage>
+            <div className="singup">
+                <Title> Faça seu login </Title>
+                    <ContanierForm onSubmit={handleSubmit}>
+                        <form className='form' onSubmit={handleSubmit}>
+                                <div>
+                                <label htmlFor="name">Nome</label>
+                                <Input type="name" name="name" id="name" value={name} onChange={(e) => setName(e.target.value)}/>
+                                </div>
+                                <div>
+                                <label htmlFor="email">Email</label>
+                                <Input type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                                </div>
+                                <div>
+                                <label htmlFor="password">Senha</label>
+                                <Input type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                                </div>
+                            <div className='actions'>
+                                <Button type='submit'>Entrar</Button>                                    
+                                <StyledLink to="/login"> Já tenho cadastro </StyledLink>
+                            </div>
+                        </form>
+                    </ContanierForm>
+            </div>
+        </SingUpPage>
     )
 }
 

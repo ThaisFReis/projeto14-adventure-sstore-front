@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import {Link} from 'react-router-dom'
 
-const LoginPage = styled.div`
+const SingUpPage = styled.div`
     width: 100vw;
     height: max-content;
     display: flex;
@@ -79,22 +79,10 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const StyledLink2 = styled(Link)`
-  margin: 5px 0 0 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(223, 223, 223);
-  font-size: 14px;
-  text-decoration: none;
-`;
-
-
 export{
-    LoginPage,
+    SingUpPage,
     ContanierForm,
     StyledLink,
     Title,
     Input,
-    StyledLink2
 }

@@ -1,9 +1,8 @@
 import React, {useState, useContext} from 'react'
 import { AuthContext } from "../Contexts/auth"
 
-import {ContanierForm, StyledLink, Title} from './style';
+import {LoginPage, ContanierForm, StyledLink, Title, StyledLink2, Input} from './style';
 import Button from "../Utils/Button/Button.js";
-import Input from '../Utils/Input/Input';
 
 
 const Login = () => {
@@ -18,25 +17,28 @@ const Login = () => {
     }
 
     return (
-        <div className="login">
-                    <Title> Adventure's Store </Title>
+        <LoginPage>
+            <div className="login">
+                <Title> Faça seu login </Title>
                     <ContanierForm onSubmit={handleSubmit}>
                         <form className='form' onSubmit={handleSubmit}>
+                                <div>
                                 <label htmlFor="email">Email</label>
                                 <Input type="email" name="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                                </div>
+                                <div>
                                 <label htmlFor="password">Senha</label>
                                 <Input type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                                </div>
                             <div className='actions'>
-                                <Button type='submit'>Entrar</Button>
+                                <Button type='submit'>Entrar</Button>                                    
                                 <StyledLink to="/SingUp"> Não tem uma conta? cadastre-se!</StyledLink>
-                                <StyledLink to="/"> Voltar para página principal</StyledLink>
+                                <StyledLink2 to="/"> Voltar para página principal</StyledLink2>
                             </div>
                         </form>
-
                     </ContanierForm>
-
-
-        </div>
+            </div>
+        </LoginPage>
     )
 }
 

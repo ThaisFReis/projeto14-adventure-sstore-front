@@ -1,73 +1,178 @@
-import Image from "../../../assets/img/image.png"
-import AddCart from "../../../assets/img/add-shopping-cart.png"
-import "./style.css"
+const products = [
 
-function Products(){
-    return(
-        <>
-                        <div className="products">
-                    <div className="product">
-                        <div className="product-image">
-                            <img src={Image} alt="product"/>
-                        </div>
-                        <div className="product-info">
-                            <p>Nome do produto</p> 
-                        </div>
-                        <div className="product-price">
-                            <p>R$ 00,00</p>
-                        </div>
-                        <div className="button-cart">
-                            <img src={AddCart} alt="add cart"/>
-                        </div>
-                    </div>
+    //Weapons
+    {
+        id: 1,
+        name: 'Faca',
+        price: "0",
+        currency: '$',
+        categories: 'weapons',
+        img: 'https://i.postimg.cc/K8PLTzdd/1.png',
+    },
+    {
+        id: 2,
+        name: 'Arco',
+        price: "0",
+        currency: '$',
+        categories: 'weapons',
+        img: 'https://i.postimg.cc/gJT6p6Z6/2.png',
+    },
+    {
+        id: 3,
+        name: 'Lança',
+        price: "0",
+        currency: '$',
+        categories: 'weapons',
+        img: 'https://i.postimg.cc/44czGBWf/3.png',
+    },
+    {
+        id: 4,
+        name: 'Pá',
+        price: "0",
+        currency: '$',
+        categories: 'weapons',
+        img: 'https://i.postimg.cc/Z5wNHg5c/4.png',
+    },
+    {
+        id: 5,
+        name: 'Espada',
+        price: "0",
+        currency: '$',
+        categories: 'weapons',
+        img: 'https://i.postimg.cc/CMbfXdKd/5.png',
+    },
+    {
+        id: 6,
+        name: 'Machado',
+        price: "0",
+        currency: '$',
+        categories: 'weapons',
+        img: 'https://i.postimg.cc/J7KRsW6P/6.png',
+    },
+    {
+        id: 7,
+        name: 'Picareta',
+        price: "0",
+        currency: '$',
+        categories: 'weapons',
+        img: 'https://i.postimg.cc/q78T4f6c/7.png',
+    },
+    {
+        id: 8,
+        name: 'Adaga',
+        price: "0",
+        currency: '$',
+        categories: 'weapons',
+        img: 'https://i.postimg.cc/qBmdkxqF/8.png',
+    },
+    {
+        id: 9,
+        name: 'Flecha',
+        price: "0",
+        currency: '$',
+        categories: 'weapons',
+        img: 'https://i.postimg.cc/9Q4p4Z21/9.png',
+    },
 
-                    <div className="product">
-                        <div className="product-image">
-                            <img src={Image} alt="product"/>
-                        </div>
-                        <div className="product-info">
-                            <p>Nome do produto</p> 
-                        </div>
-                        <div className="product-price">
-                            <p>R$ 00,00</p>
-                        </div>
-                        <div className="button-cart">
-                            <img src={AddCart} alt="add cart"/>
-                        </div>
-                    </div>
+    //Foods
+    {
+        id: 10,
+        name: 'Filé de Carne',
+        price: "0",
+        currency: '$',
+        categories: 'foods',
+        img: 'https://i.postimg.cc/NMP8fjnZ/29.png',
+    },
+    {
+        id: 11,
+        name: 'Maçã',
+        price: "0",
+        currency: '$',
+        categories: 'foods',
+        img: 'https://i.postimg.cc/yxgmJz4x/30.png',
+    },
+    {
+        id: 12,
+        name: 'Cenoura',
+        price: "0",
+        currency: '$',
+        categories: 'foods',
+        img: 'https://i.postimg.cc/k4D8Zd5s/31.png',
+    },
+    {
+        id: 13,
+        name: 'Peixe',
+        price: "0",
+        currency: '$',
+        categories: 'foods',
+        img: 'https://i.postimg.cc/fWtxbhhX/33.png',
+    },
+    {
+        id: 14,
+        name: 'Coxa de Frango',
+        price: "0",
+        currency: '$',
+        categories: 'foods',
+        img: 'https://i.postimg.cc/5yg1VRpt/40.png',
+    },
+    {
+        id: 15,
+        name: 'Cogumelo',
+        price: "0",
+        currency: '$',
+        categories: 'foods',
+        img: 'https://i.postimg.cc/xCFh3VsM/50.png',
+    },
 
-                    <div className="product">
-                        <div className="product-image">
-                            <img src={Image} alt="product"/>
-                        </div>
-                        <div className="product-info">
-                            <p>Nome do produto</p> 
-                        </div>
-                        <div className="product-price">
-                            <p>R$ 00,00</p>
-                        </div>
-                        <div className="button-cart">
-                            <img src={AddCart} alt="add cart"/>
-                        </div>
-                    </div>
+    //Equipment
+    {
+        id: 16,
+        name:  'Camisa',
+        price: "0",
+        currency: '$',
+        categories: 'equipment',
+        img: 'https://i.postimg.cc/g26VcpyT/11.png',
+    },
+    {
+        id: 17,
+        name:  'Armadura de Madeira',
+        price: "0",
+        currency: '$',
+        categories: 'equipment',
+        img: 'https://i.postimg.cc/dQHr834f/12.png',
+    },
+    {
+        id: 18,
+        name:  'Armadura Acolchoada',
+        price: "0",
+        currency: '$',
+        categories: 'equipment',
+        img: 'https://i.postimg.cc/d3phg7ft/13.png',
+    },
+    {
+        id: 19,
+        name:  'Escudo',
+        price: "0",
+        currency: '$',
+        categories: 'equipment',
+        img: 'https://i.postimg.cc/1zBfs7dd/14.png',
+    },
+    {
+        id: 20,
+        name:  'Par de Botas',
+        price: "0",
+        currency: '$',
+        categories: 'equipment',
+        img: 'https://i.postimg.cc/tC6JY4fW/15.png',
+    },
+    {
+        id: 21,
+        name:  'Capuz',
+        price: "0",
+        currency: '$',
+        categories: 'equipment',
+        img: 'https://i.postimg.cc/nMfHvq57/16.png',
+    },
+]
 
-                    <div className="product">
-                        <div className="product-image">
-                            <img src={Image} alt="product"/>
-                        </div>
-                        <div className="product-info">
-                            <p>Nome do produto</p> 
-                        </div>
-                        <div className="product-price">
-                            <p>R$ 00,00</p>
-                        </div>
-                        <div className="button-cart">
-                            <img src={AddCart} alt="add cart"/>
-                        </div>
-                    </div>
-                </div>
-        </>
-    )
-}
-
-export default Products;
+export default products;
