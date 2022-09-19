@@ -22,7 +22,8 @@ function SingUp(){
     
           navigator('/');
         } catch (error) {
-          console.error('Deu erro ao cadastrar o usuario');
+            alert("Erro ao cadastrar");          
+            console.error('Deu erro ao cadastrar o usuario');
         }
       }
     return (
