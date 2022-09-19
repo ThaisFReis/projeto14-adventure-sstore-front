@@ -17,7 +17,7 @@ function SingUp(){
         e.preventDefault();
         const body = { name, email, password, confirmPassword };
         try {
-          await axios.post('http://localhost:3000/cadastro', body);
+          await axios.post('http://localhost:5000/signup', body);
           navigate("/login");
     
           navigator('/');
