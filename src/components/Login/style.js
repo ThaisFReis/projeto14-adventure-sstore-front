@@ -6,16 +6,14 @@ const LoginPage = styled.div`
     height: max-content;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     font-family: 'Recursive', sans-serif;
     font-family: 'Righteous', cursive;
     font-family: 'Viga', sans-serif;
 
-    background-color: rgb(48, 48, 48);
-
-    flex-grow: 1;
-    overflow: auto;
+    background-color: #040404;
 `
 
 const Title = styled.h1`
@@ -23,7 +21,7 @@ const Title = styled.h1`
   font-size: 50px;
   font-weight: 700;
   text-align: center;
-  margin: 50px 0 50px 0
+  margin: 50% 0 50px 0;
 
 `
 
@@ -46,10 +44,6 @@ const ContanierForm = styled.div`
   label{
     color: #fff;
     font-size: 20px;
-  }
-  
-  button{
-    background-color: #000;
   }
 `
 const Input = styled.input`

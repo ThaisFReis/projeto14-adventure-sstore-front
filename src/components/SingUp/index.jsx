@@ -45,7 +45,7 @@ function SingUp(){
                                 </div>
                             <div className='actions'>
                                 <Button type='submit'>Finalizar</Button>                                    
-                                <StyledLink to="/login"> Já tenho cadastro </StyledLink>
+                                <StyledLink to="/login"> Já possui uma conta? Faça login </StyledLink>
                             </div>
                         </form>
                     </ContanierForm>

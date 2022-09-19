@@ -11,12 +11,20 @@ function Header(){
              navigate("/login");
      }
 
+     async function openCart(e){
+        navigate("/cart");
+}
+
     return(
         <div className="header">
             <h1>Adventurer's Shop</h1>
             <div className="menu">
-                <img src={Costumer} alt="login"  onClick={handleSubmit}/>
-                <img src={Cart} alt="carrinho" />
+                <div>
+                    <img src={Costumer} alt="login"  onClick={handleSubmit}/>
+                </div>
+                <div>
+                    <img src={Cart} alt="Carrinho" onClick={openCart}/>
+                </div>
             </div>
         </div>
     )

@@ -8,14 +8,6 @@ const SingUpPage = styled.div`
     flex-direction: column;
     align-items: center;
 
-    font-family: 'Recursive', sans-serif;
-    font-family: 'Righteous', cursive;
-    font-family: 'Viga', sans-serif;
-
-    background-color: rgb(48, 48, 48);
-
-    flex-grow: 1;
-    overflow: auto;
 `
 
 const Title = styled.h1`
@@ -23,7 +15,7 @@ const Title = styled.h1`
   font-size: 50px;
   font-weight: 700;
   text-align: center;
-  margin: 50px 0 50px 0
+  margin: 50% 0 50px 0;
 
 `
 
@@ -47,10 +39,6 @@ const ContanierForm = styled.div`
     color: #fff;
     font-size: 20px;
   }
-  
-  button{
-    background-color: #000;
-  }
 `
 const Input = styled.input`
   height: 45px;
@@ -58,9 +46,7 @@ const Input = styled.input`
   border: 1px solid #D4D4D4;
   background-color: #FFFFFF;
   color: #222222;
-  font-family: 'Lexend Deca', sans-serif;
-  padding: 14px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   border-radius: 4px;
   ::placeholder {
     color: #DBDBDB;

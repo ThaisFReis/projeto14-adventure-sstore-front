@@ -1,12 +1,13 @@
-import products from "../Products"
+import weapons from "../weapons/weapons"
+
 import "./style.css"
 import coin from "../../../assets/img/coin.png"
 import cart from "../../../assets/img/shopping-cart.png"
 
-const MainContent = () => {
-    console.log(products)
+const Weapons = () => {
+    console.log(weapons)
 
-    const listProducts = products.map((product) =>
+    const listweapons = weapons.map((product) =>
         <div className="card" key={product.id}>
             <div className="card_img">
                 <img src={product.img} alt={product.img}/>
@@ -26,9 +27,9 @@ const MainContent = () => {
 
     return(
         <div className="main_content">
-           {listProducts} 
+           {listweapons} 
         </div>
     )
 }
 
-export default MainContent;
+export default Weapons;

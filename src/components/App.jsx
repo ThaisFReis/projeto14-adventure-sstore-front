@@ -5,9 +5,11 @@ import {
     Routes
 } from 'react-router-dom';
 
-import Login from "./Login/index.js";
-import SingUp from "./SingUp/index.js"
-import Home from "./Home/index.js";
+import Login from "./Login/index.jsx";
+import SingUp from "./SingUp/index.jsx"
+import Home from "./Home/index.jsx";
+import Main from "./Main/index.jsx";
+import Cart from "./Cart/index.jsx";
 
 import { AuthProvider } from './Contexts/auth';
 
@@ -21,6 +23,8 @@ return (
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/singup" element={<SingUp />} />
+                <Route path="/main" element={<Main />} />
+                <Route path="/cart" element={<Cart />} />
             </Routes>
         </AuthProvider>
     </Router>
