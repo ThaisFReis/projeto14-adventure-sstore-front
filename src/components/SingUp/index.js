@@ -18,6 +18,7 @@ function SingUp(){
         const body = { name, email, password, confirmPassword };
         try {
           await axios.post('http://localhost:3000/cadastro', body);
+          navigate("/login");
     
           navigator('/');
         } catch (error) {
@@ -27,7 +28,7 @@ function SingUp(){
     return (
         <SingUpPage>
             <div className="singup">
-                <Title> Faça seu login </Title>
+                <Title> Faça seu cadastro </Title>
                     <ContanierForm onSubmit={handleSubmit}>
                         <form className='form' onSubmit={handleSubmit}>
                                 <div>
@@ -43,7 +44,7 @@ function SingUp(){
                                 <Input type="password" name="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
                                 </div>
                             <div className='actions'>
-                                <Button type='submit'>Entrar</Button>                                    
+                                <Button type='submit'>Finalizar</Button>                                    
                                 <StyledLink to="/login"> Já tenho cadastro </StyledLink>
                             </div>
                         </form>
