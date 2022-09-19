@@ -1,13 +1,7 @@
-/*
-import React, { useState, useEffect, useContext } from "react";
-import axios from "axios";
-
-import { categoryContext } from "../Contexts/categoryContext"
-*/
 import React from "react"; 
 import { useNavigate } from "react-router-dom";
 
-import "./style.css"
+import "./index.css"    
 
 function Categories(){
     const navigate = useNavigate();
@@ -16,24 +10,31 @@ function Categories(){
         console.log("clicked")
         navigate("/main")
     }
-    /*
-    const [categories, setCategories] = useState([]);
-    const { setCategoryName } = useContext(categoryContext);
-    const navigate = useNavigate();
-*/
     return(
         <>
                 <div className="categories">
-                    <div className="categories__title" onClick={handleClick}>
+                <div className="categories__title" 
+                    onClick={() => {
+                        navigate("/all");
+              }}>
                         <p>Todos</p>
                     </div>
-                    <div className="categories__title" onClick={handleClick}>
+                    <div className="categories__title" 
+                    onClick={() => {
+                        navigate("/weapons");
+              }}>
                         <p>Armas</p>
                     </div>
-                    <div className="categories__title" onClick={handleClick}>
+                    <div className="categories__title" 
+                    onClick={() => {
+                        navigate("/equipment");
+              }}>
                         <p>Equipamento</p>
                     </div>
-                    <div className="categories__title" onClick={handleClick}>
+                    <div className="categories__title" 
+                    onClick={() => {
+                        navigate("/foods");
+              }}>
                         <p>Comida</p>
                     </div>
                 </div>

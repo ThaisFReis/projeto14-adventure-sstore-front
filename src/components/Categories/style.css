@@ -1,58 +1,93 @@
-.categories{
-    width: 100vw;
-    height: 8vh;
-    border: rgb(15, 15, 15) 1px solid;
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_content{
+    width: 70%;
+    height: fit-content;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    margin-top: 40px;
+    gap: 50px;
 }
 
-.categories .categories__title{
-    width: 300px;
-    height: 8vh;
+.card{
+    width: 250px;
+    height: 300px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
-    text-align: center;
-    border-right: rgb(15, 15, 15) 1px solid;
-    color: #fff;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    cursor: pointer;
+    background-color: #040404;
+    border: 1px solid rgb(185, 185, 185);
+    margin-top: 20px;
+    border-radius: 5%;
 }
 
-.categories .categories__title p{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    width: 300px;
-    height: 8vh;
-    color: #fff;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-}
-
-.categories .categories__title p:hover{
-    color: #000;
-}
-
-.categories .categories__title:hover{
-    width: 300px;
-    height: 8vh;
+.card_img{
     background-color: #fff;
-    color: #000;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(185, 185, 185);
+    border-radius: 5%;
+    margin: 30px 0 10px 0;
 }
 
-.outro{
-    width: 300px;
-    height: 8vh;
-    background-color: #fff;
-    color: #000;
+.card_img img{
+    width: 60px;
+}
+
+.card_header{
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.card_header p{
+    color: #fff;
+    font-size: 20px;
+}
+
+.price{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 85%;
+    height: fit-content;
+    margin-top: 50px;
+}
+
+.price div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    gap: 10px;
+}
+
+.price div p{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.price img{
+    width: 30px;
+}
+ 
+.price .btn{
+    width: 40px;
 }
